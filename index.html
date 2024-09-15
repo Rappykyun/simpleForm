@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form X Validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .error input {
+        border-color: #e74c3c;
+      }
+      .success input {
+        border-color: #2ecc71;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div
+      class="w-full max-w-md mx-auto my-20 p-6 bg-white border rounded-xl shadow-md"
+    >
+      <form novalidate class="space-y-4">
+        <div>
+          <label for="email" class="block mb-1">Email:</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none p-2"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+          <span class="text-red-500 text-xs hidden" id="emailError"></span>
+        </div>
+        <div>
+          <label for="country" class="block mb-1">Country:</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none p-2"
+            type="text"
+            name="country"
+            id="country"
+          />
+          <span class="text-red-500 text-xs hidden" id="countryError"></span>
+        </div>
+        <div>
+          <label for="zipcode" class="block mb-1">Zipcode:</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none p-2"
+            type="text"
+            name="zipcode"
+            id="zipcode"
+          />
+          <span class="text-red-500 text-xs hidden" id="zipcodeError"></span>
+        </div>
+        <div>
+          <label for="password" class="block mb-1">Password:</label>
+          <input
+            class="w-full rounded-lg border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none p-2"
+            type="password"
+            name="password"
+            id="password"
+          />
+          <span class="text-red-500 text-xs hidden" id="passwordError"></span>
+        </div>
+        <div>
+          <label for="confirmPassword" class="block mb-1"
+            >Confirm Password:</label
+          >
+          <input
+            class="w-full rounded-lg border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none p-2"
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+          />
+          <span
+            class="text-red-500 text-xs hidden"
+            id="confirmPasswordError"
+          ></span>
+        </div>
+        <button
+          type="submit"
+          id="submit"
+          class="w-full p-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:bg-blue-700 focus:outline-none focus:ring"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
